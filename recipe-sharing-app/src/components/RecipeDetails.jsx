@@ -19,6 +19,7 @@ const RecipeDetails = () => {
       <DeleteRecipeButton recipeId={recipe.id} />
     </div>
   );
+  
 };
 
 export default RecipeDetails;

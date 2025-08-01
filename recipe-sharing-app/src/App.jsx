@@ -3,6 +3,9 @@ import AddRecipeForm from './components/AddRecipeForm';
 import RecipeList from './components/RecipeList';
 import RecipeDetails from './components/RecipeDetails';
 import SearchBar from './components/SearchBar';
+import FavouritesList from './components/FavouritesList';
+import RecommendationList from './components/RecommendationList';
+
 
 function App() {
   return (
