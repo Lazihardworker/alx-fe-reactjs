@@ -11,9 +11,7 @@ const DeleteRecipeButton = ({ recipeId }) => {
   };
 
   return (
-    <button onClick={handleDelete} style={{ marginTop: '10px' }}>
-      Delete Recipe
-    </button>
+    <button onClick={handleDelete}>Delete Recipe</button>
   );
 };
 

@@ -5,7 +5,7 @@ import RecipeDetails from './components/RecipeDetails';
 
 function App() {
   return (
-    <div style={{ padding: '20px', maxWidth: '600px', margin: 'auto' }}>
+    <div>
       <h1>Recipe Sharing App</h1>
       <nav>
         <Link to="/">Home</Link>
