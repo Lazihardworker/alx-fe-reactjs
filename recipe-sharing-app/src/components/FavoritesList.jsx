@@ -1,16 +1,16 @@
 import { useRecipeStore } from './recipeStore';
 import { Link } from 'react-router-dom';
 
-const FavouritesList = () => {
-  const favourites = useRecipeStore((state) => state.favourites);
+const FavoritesList = () => {
+  const favorites = useRecipeStore((state) => state.favorites);
 
   return (
     <div>
-      <h2>Favourites</h2>
+      <h2>Favorites</h2>
       {favourites.length === 0 ? (
-        <p>No favourite recipes yet.</p>
+        <p>No favorite recipes yet.</p>
       ) : (
-        favourites.map((recipe) => (
+        favorites.map((recipe) => (
           <div key={recipe.id}>
             <h4>
               <Link to={`/recipe/${recipe.id}`}>{recipe.title}</Link>
@@ -22,4 +22,4 @@ const FavouritesList = () => {
   );
 };
 
-export default FavouritesList;
+export default FavoritesList;

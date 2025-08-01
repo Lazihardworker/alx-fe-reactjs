@@ -4,7 +4,7 @@ export const useRecipeStore = create((set, get) => ({
   recipes: [],
   searchTerm: '',
   filteredRecipes: [],
-  favourites: [],
+  favorites: [],
   recommendations: [],
 
   addRecipe: (newRecipe) => {
@@ -20,7 +20,7 @@ export const useRecipeStore = create((set, get) => ({
     return set({
       recipes: updatedRecipes,
       filteredRecipes: get().filterRecipes(updatedRecipes, get().searchTerm),
-      favourites: get().favourites.filter((r) => r.id !== id),
+      favorites: get().favorites.filter((r) => r.id !== id),
     });
   },
 
@@ -45,18 +45,18 @@ export const useRecipeStore = create((set, get) => ({
       recipe.title.toLowerCase().includes(term.toLowerCase())
     ),
 
-  toggleFavourite: (recipe) => {
-    const exists = get().favourites.find((r) => r.id === recipe.id);
+  toggleFavorite: (recipe) => {
+    const exists = get().favorites.find((r) => r.id === recipe.id);
     set((state) => ({
-      favourites: exists
-        ? state.favourites.filter((r) => r.id !== recipe.id)
-        : [...state.favourites, recipe],
+      favorites: exists
+        ? state.favorites.filter((r) => r.id !== recipe.id)
+        : [...state.favorites, recipe],
     }));
   },
 
   generateRecommendations: () => {
     const all = get().recipes;
-    const recommended = all.slice(0, 3); // just first 3 for demo
+    const recommended = all.slice(0, 3); 
     set({ recommendations: recommended });
   },
 }));
