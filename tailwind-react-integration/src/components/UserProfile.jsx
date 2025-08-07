@@ -1,6 +1,5 @@
 import React from 'react';
-import profileImage from '../assets/profile.jpg'; // Make sure this image exists
-// If you're using another image path, update accordingly
+import profileImage from '../assets/profile.jpg';
 
 const UserProfile = () => {
   return (
@@ -8,9 +7,11 @@ const UserProfile = () => {
       <img
         src={profileImage}
         alt="User"
-        className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-4 object-cover"
+        className="w-20 h-20 sm:w-24 sm:h-24 md:w-36 md:h-36 rounded-full mx-auto mb-4 object-cover"
       />
-      <h2 className="text-lg md:text-xl font-semibold text-gray-800 text-center">Sulaiman Solih</h2>
+      <h2 className="text-lg md:text-xl font-semibold text-gray-800 text-center">
+        Sulaiman Solih
+      </h2>
       <p className="text-sm md:text-base text-gray-600 text-center mt-2">
         Customer Experience Analyst | Digital Tools Enthusiast
       </p>
